@@ -1,0 +1,3 @@
+[build]
+# Disable this if compiling for a different computer.
+rustflags = ["-Ctarget-cpu=native"]
