@@ -293,15 +293,12 @@ impl Aes128Ocb3 {
                 }
 
                 // P_i = Offset_i xor DECIPHER(K, C_i xor Offset_i)
+                // Checksum_i = Checksum_{i-1} xor P_i
                 for j in 0..C_i.len() {
                     inplace_xor(C_i[j], &Offset_i[j]);
                     self.cipher.decrypt_block(C_i[j]);
-                    inplace_xor(C_i[j], &Offset_i[j])
-                }
-
-                // Checksum_i = Checksum_{i-1} xor P_i
-                for P_ij in &C_i {
-                    inplace_xor(&mut Checksum_i, P_ij);
+                    inplace_xor(C_i[j], &Offset_i[j]);
+                    inplace_xor(&mut Checksum_i, C_i[j]);
                 }
 
                 i += WIDTH;
