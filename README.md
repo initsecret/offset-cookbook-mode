@@ -45,11 +45,11 @@ assert_eq!(buffer, vec![0u8; 4096]);
 Performance on AWS [`m6i.metal`](https://aws.amazon.com/ec2/instance-types/m6i/) with 4kb input and 16 byte associated data, run with `-Ctarget-cpu=native`, and comparing with [Ring's](https://github.com/briansmith/ring) AES128-GCM and [RustCrypto's](https://github.com/RustCrypto/AEADs/tree/master/aes-gcm) AES128-GCM.
 
 <p align="center">
-<img src="assets/enc-perf.svg" alt="Bar chart showing encryption performance in throughput. ocb3 achieves 6.0406 GB/s, ocb3-ctx achieves 5.0753 GB/s, ring-gcm achieves 5.5617 GB/s, and rustcrypto-gcm achieves 1.2381 GB/s.">
+<img src="assets/enc-perf.svg" alt="Bar chart showing encryption performance in throughput. ocb3 achieves 6.0363 GB/s, ocb3-ctx achieves 5.0585 GB/s, ring-gcm achieves 5.5886 GB/s, and rustcrypto-gcm achieves 1.2354 GB/s.">
 </p>
 
 <p align="center">
-<img src="assets/dec-perf.svg" alt="Bar chart showing decryption performance in throughput.ocb3 achieves 4.4013 GB/s, ocb3-ctx achieves 3.8026 GB/s, ring-gcm achieves 5.3625 GB/s, and rustcrypto-gcm achieves 1.2370 GB/s.">
+<img src="assets/dec-perf.svg" alt="Bar chart showing decryption performance in throughput.ocb3 achieves 6.7991 GB/s, ocb3-ctx achieves 5.4553 GB/s, ring-gcm achieves 5.3751 GB/s, and rustcrypto-gcm achieves 1.2217 GB/s.">
 </p>
 
 ---
