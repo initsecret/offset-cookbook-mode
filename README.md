@@ -1,3 +1,7 @@
+NOTE: This has been upstreamed to [RustCrypto/AEADs/ocb3](https://github.com/RustCrypto/AEADs/tree/master/ocb3).
+
+---
+
 # `offset-cookbook-mode`: Experimental OCB3 and CTX\<OCB3\>
 
 [![Rust](https://github.com/sgmenda/offset-cookbook-mode/actions/workflows/rust.yml/badge.svg)](https://github.com/sgmenda/offset-cookbook-mode/actions/workflows/rust.yml)
